@@ -10,10 +10,10 @@ public class Main  {
     public static void main(String[] args) throws IOException {
 
         // construct a data parser
-        DataParser dp = new DataParser();
+        // DataParser dp = new DataParser();
 
         // construct new bot with level 0 as default and given data parser
-        Bot bot = new Bot("0", dp);
+        Bot bot = new Bot("0");
 
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));

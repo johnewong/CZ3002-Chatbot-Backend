@@ -33,7 +33,13 @@
             <artifactId>bot</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>/Users/yifei/Dropbox/NTU/Year3/CZ3002-ADVANCED SOFTWARE ENGINEERING/CZ3002-Chatbot-Backend/bot/out/artifacts/bot_jar/bot.jar</systemPath>
+            <systemPath>${project.basedir}/lib/bot.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.6</version>
         </dependency>
     </dependencies>
 

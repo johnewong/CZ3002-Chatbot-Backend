@@ -27,6 +27,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>cz3002.kopio</groupId>
+            <artifactId>bot</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>/Users/yifei/Dropbox/NTU/Year3/CZ3002-ADVANCED SOFTWARE ENGINEERING/CZ3002-Chatbot-Backend/bot/out/artifacts/bot_jar/bot.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>

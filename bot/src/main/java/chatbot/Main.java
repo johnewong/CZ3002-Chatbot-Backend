@@ -26,6 +26,9 @@ public class Main  {
 
             input = reader.readLine();
             String response = bot.send(input);
+
+
+
             if (response.length() > 0) {
                 System.out.println(response);
             }

@@ -18,6 +18,8 @@ public class Bot {
         dictionary = new HashMap<String,String>();
         this.level = level;
         this.parser = parser;
+
+        System.out.println("Chat bot initialization...");
     }
 
     // get current state message

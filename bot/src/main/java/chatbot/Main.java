@@ -13,7 +13,7 @@ public class Main  {
         // DataParser dp = new DataParser();
 
         // construct new bot with level 0 as default and given data parser
-        Bot bot = new Bot("0");
+        Bot bot = new Bot("0","D:\\ntu\\advance software\\backend\\CZ3002-Chatbot-Backend\\bot\\data.xml");
 
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));

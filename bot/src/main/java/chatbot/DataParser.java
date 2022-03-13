@@ -14,24 +14,25 @@ import org.xml.sax.SAXException;
 public class DataParser {
 
     private Document dom;
+    private String dataPath;
     private HashMap<String, State> states = new HashMap<String, State>();
     private ArrayList<String> invalidMessages = new ArrayList();
     private int invalidMessageIndex = 0;
     public  int stateCounter = 1000;
 
     // default constructor
-    public DataParser() {
+    public DataParser(String dataPath) {
 
         // Load the XML file and parse it
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-
+        this.dataPath = dataPath;
         try {
 
             //Using factory get an instance of document builder
             DocumentBuilder db = dbf.newDocumentBuilder();
 
             //parse using builder to get DOM representation of the XML file
-            dom = db.parse("data.xml");
+            dom = db.parse(this.dataPath);
 
             // Load configuration and states from the XML file
             loadConfiguration();

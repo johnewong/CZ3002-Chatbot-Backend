@@ -14,11 +14,10 @@ public class Bot {
     DataParser parser;
 
     // default constructor
-    public Bot(String level) {
+    public Bot(String level, String dataPath) {
         dictionary = new HashMap<String,String>();
         this.level = level;
-        this.parser = new DataParser();;
-
+        this.parser = new DataParser(dataPath);
         System.out.println("Chat bot initialization...");
     }
 

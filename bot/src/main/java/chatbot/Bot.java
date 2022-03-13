@@ -1,9 +1,25 @@
 package chatbot;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class Bot {
     // Store all regular expression matches
@@ -12,11 +28,14 @@ public class Bot {
     // Default state to start the bot
     String level = "0";
     DataParser parser;
-
+    String faqPath;
+    String ratingPath;
     // default constructor
-    public Bot(String level, String dataPath) {
+    public Bot(String level, String dataPath, String faqPath, String ratingPath) {
         dictionary = new HashMap<String,String>();
         this.level = level;
+        this.faqPath = faqPath;
+        this.ratingPath = ratingPath;
         this.parser = new DataParser(dataPath);
         System.out.println("Chat bot initialization...");
     }
@@ -175,4 +194,85 @@ public class Bot {
         // remove empty variables tags
         return Regex.clear(text);
     }
+
+    public void rateAnswer(String ans, String rate)  {
+        try {
+
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            Document doc = db.parse(ratingPath);
+            // Get the parent node
+            Node data = doc.getFirstChild();
+            // Get the employee element
+
+            // Add a new node
+            Element Result = doc.createElement("Result");
+            Element Answer = doc.createElement("Answer");
+            Element Rating = doc.createElement("Rating");
+            Answer.appendChild(doc.createTextNode(ans));
+            Rating.appendChild(doc.createTextNode(rate));
+            Result.appendChild(Answer);
+            Result.appendChild(Rating);
+            data.appendChild(Result);
+            // write the content to the xml file
+            TransformerFactory tf = TransformerFactory.newInstance();
+            Transformer transformer = tf.newTransformer();
+            DOMSource src = new DOMSource(doc);
+            StreamResult res = new StreamResult(new File(this.ratingPath));
+            transformer.transform(src, res);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public ArrayList getFAQ(int topRows) {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+        ArrayList faqlist = new ArrayList();
+        try {
+
+            //Using factory get an instance of document builder
+            DocumentBuilder db = dbf.newDocumentBuilder();
+
+            //parse using builder to get DOM representation of the XML file
+            Document dom = db.parse(this.faqPath);
+
+            Element docEle = dom.getDocumentElement();
+
+            NodeList nl = docEle.getElementsByTagName("Question");
+            System.out.println(nl);
+
+
+
+            if (nl != null && nl.getLength() > 0) {
+
+                // loop through all children
+                for (int i = 0; i < nl.getLength(); i++) {
+                    Element el = (Element) nl.item(i);
+                    String question = el.getTextContent().replaceAll("\\s","");
+                    // get state id
+                    int id = Integer.parseInt(el.getAttribute("id"));
+                    if(id <= topRows){
+                        faqlist.add(question);
+                    }
+                    // get all state messages
+
+                }
+
+            }
+            // Load configuration and states from the XML file
+
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        } catch (SAXException se) {
+            se.printStackTrace();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        return faqlist;
+    }
+
+
+
 }

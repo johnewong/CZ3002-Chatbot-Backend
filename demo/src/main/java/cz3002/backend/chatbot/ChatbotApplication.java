@@ -15,7 +15,7 @@ public class ChatbotApplication {
         String currentDir = System.getProperty("user.dir");
         // construct new bot with level 0 as default and given data parser
         Bot bot = new Bot("0", currentDir + "\\chatbotData\\data.xml",currentDir + "\\chatbotData\\faq.xml",currentDir + "\\chatbotData\\rating.xml");
-        System.out.println(bot.getFAQ(10));
+
         SpringApplication.run(ChatbotApplication.class, args);
     }
 

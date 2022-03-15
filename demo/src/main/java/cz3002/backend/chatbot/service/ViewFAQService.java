@@ -5,7 +5,7 @@ public class ViewFAQService {
         return "Thank you for your support";
     }
 
-    public String returnQuestList(){
+    public String returnQuestionList(){
         return "Thank you for your support";
     }
 }

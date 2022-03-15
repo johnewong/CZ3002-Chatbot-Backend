@@ -1,8 +1,6 @@
 package cz3002.backend.chatbot;
 
 import chatbot.Bot;
-import cz3002.backend.chatbot.dao.ReadExcel;
-import cz3002.backend.chatbot.pojo.RateResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -20,9 +18,6 @@ public class ChatbotApplication {
        // Bot bot = new Bot("0", currentDir + "\\chatbotData\\data.xml",currentDir + "\\chatbotData\\faq.xml",currentDir + "\\chatbotData\\rating.xml");
 
         SpringApplication.run(ChatbotApplication.class, args);
-
-        String excelFileName = "";
-        List<RateResponse> readResult = ReadExcel.readExcel(excelFileName);
 
 
     }

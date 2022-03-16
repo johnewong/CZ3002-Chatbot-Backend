@@ -14,12 +14,13 @@ public class BotUnitTest {
 
     @BeforeEach
     void setUp() {
-        bot =  new Bot("0", currentDir + "\\chatbotData\\data.xml", currentDir + "\\chatbotData\\faq.xml", currentDir + "\\chatbotData\\rating.xml");
+        bot = new Bot("0", "chatbotData/data.xml",  "chatbotData/faq.xml",   "chatbotData/rating.xml");
     }
 
     @Test
-    @DisplayName("Simple test")
-    void testBot() {
-        assertEquals(0,0);
+    @DisplayName("Test bot when state is 0")
+    void testBotState0() {
+        bot = new Bot("0", "chatbotData/data.xml",  "chatbotData/faq.xml",   "chatbotData/rating.xml");
+        assertEquals( Integer.parseInt(bot.level),0);
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+    <Question id="1">
+        faq1
+    </Question>
+
+    <Question id="2">
+        faq2
+    </Question>
+
+    <Question id="3">
+        faq3
+    </Question>
+
+    <Question id="4">
+        faq4
+    </Question>
+
+    <Question id="5">
+        faq5
+    </Question>
+
+    <Question id="6">
+        faq6
+    </Question>
+
+    <Question id="7">
+        faq7
+    </Question>
+
+
+    <Question id="8">
+        faq8
+    </Question>
+
+
+    <Question id="9">
+        faq9
+    </Question>
+
+
+    <Question id="10">
+        faq10
+    </Question>
+</Config>

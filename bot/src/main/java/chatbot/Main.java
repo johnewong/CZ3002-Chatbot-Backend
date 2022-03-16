@@ -14,7 +14,8 @@ public class Main  {
 
         // construct new bot with level 0 as default and given data parser
         String currentDir = System.getProperty("user.dir");
-        Bot bot = new Bot("0", currentDir + "\\chatbotData\\data.xml", currentDir + "\\chatbotData\\faq.xml", currentDir + "\\chatbotData\\rating.xml");
+        //Bot bot = new Bot("0", currentDir + "\\chatbotData\\data.xml", currentDir + "\\chatbotData\\faq.xml", currentDir + "\\chatbotData\\rating.xml");
+        Bot bot = new Bot("0", "chatbotData/data.xml",  "chatbotData/faq.xml",   "chatbotData/rating.xml");
         //System.out.println(bot.getFAQ(5));
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));

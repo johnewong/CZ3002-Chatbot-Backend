@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+    <State id="0">
+        <message>Hello, My name is KopiO, how can I help you?</message>
+        <keywords>
+            <keyword target="51">id,Hub iD</keyword>
+            <keyword target="52">terminate,terminate service,terminate services</keyword>
+            <keyword target="53">cart,add item,add item cart</keyword>
+            <keyword target="54">review,review order</keyword>
+            <keyword target="55">eligible,eligible coupon,coupon code</keyword>
+            <keyword target="56">Can I use the coupon code at your shops</keyword>
+            <keyword target="57">Can I add or edit Value-Added Services</keyword>
+            <keyword target="58">Can I change, cancel or add items to my order</keyword>
+            <keyword target="59">Can I get the coupon code if I did not complete my transaction online</keyword>
+            <keyword target="60">HIs there any expiry for coupon code</keyword>
+
+<!--            <keyword target="51">Hub iD</keyword>-->
+<!--            <keyword target="52">How do I terminate my StarHub services</keyword>-->
+<!--            <keyword target="53">How do I add an item to my cart</keyword>-->
+<!--            <keyword target="54">How can I review my order</keyword>-->
+<!--            <keyword target="55">How can I be eligible for coupon code offer</keyword>-->
+<!--            <keyword target="56">Can I use the coupon code at your shops</keyword>-->
+<!--            <keyword target="57">Can I add or edit Value-Added Services</keyword>-->
+<!--            <keyword target="58">Can I change, cancel or add items to my order</keyword>-->
+<!--            <keyword target="59">Can I get the coupon code if I did not complete my transaction online</keyword>-->
+<!--            <keyword target="60">HIs there any expiry for coupon code</keyword>-->
+            <keyword target="16">hi,hello</keyword>
+<!--            <keyword target="16" variable="name" points="2">.*name is ([a-zA-z]+).*</keyword>-->
+<!--            <keyword target="16" variable="name">([a-zA-Z ]+)</keyword>-->
+        </keywords>
+    </State>
+
+    <State id="51">
+        <message>New to StarHub? You can create a Hub iD and password to explore or manage your StarHub services online or/and via My StarHub App. Your Hub iD will be the email address you used upon registration. With one iD for everything, you can now access all things StarHub, even on the go!</message>
+    </State>
+
+    <State id="52">
+        <message>Requests for termination of StarHub Broadband/TV services, together with the return of StarHub equipment, depending on type of services to be terminated, should be made at any of the 4 main StarHub Shops (Plaza Singapura, Jurong Point, Nex or Tampines). Your service is terminated as soon as your request is processed at either of these StarHub Shops, and you will no longer be able to use the service.</message>
+    </State>
+
+    <State id="53">
+        <message>Items will be automatically added to your cart once you have selected a phone/Broadband Plan, and have logged in to customise your order.</message>
+    </State>
+
+    <State id="54">
+        <message>You can review your order before proceeding to payment and delivery.</message>
+    </State>
+
+    <State id="55">
+        <message>You will be eligible for coupon code offer if you have successfully applied a valid coupon code when you sign up to our services via the online store. Promotion terms and conditions apply.</message>
+    </State>
+
+    <State id="56">
+        <message>No, the coupon code can only be used for sign-ups via our online store.</message>
+    </State>
+
+    <State id="57">
+        <message>You can add or edit Value-Added Services when customising your order.</message>
+    </State>
+
+    <State id="58">
+        <message>You can change your order by clicking on the edit 'pencil' icon and cancel by clicking on the delete ‘bin’ icon. The Online Store currently does not allow multiple orders, so you will have to complete any ongoing transactions before making another purchase.</message>
+    </State>
+
+    <State id="59">
+        <message>No, the offer is only applicable for customers who have successfully applied the coupon code when signing up to our services via the online store.</message>
+    </State>
+
+    <State id="60">
+        <message>Yes, the coupon code will expire when the promotion ends.</message>
+    </State>
+    <State id="1">
+        <message>What do you want to talk about?</message>
+        <message>What else?</message>
+        <message>Tell me more...</message>
+        <message>What is it that you really want to know? </message>
+        <keyword className="Weather" arg="today">weather</keyword>
+        <keyword className="Weather" arg="tomorrow">tomorrow weather</keyword>
+        <keyword className="Weather" arg="dayaftertomorrow">day after tomorrow</keyword>
+        <keyword target="15" variable="status">.*I am ([a-zA-Z]+).*</keyword>
+        <keyword target="16" variable="name">.*my name is ([a-zA-z]+).*</keyword>
+        <keyword variable="subject" target="27">([a-zA-z]+)</keyword>
+    </State>
+
+    <State id="11">
+        <message>That's great, why you are happy?</message>
+        <keywords>
+            <keyword target="21">lottery</keyword>
+            <keyword target="23">finish assignment</keyword>
+            <keyword target="32">holiday</keyword>
+            <keyword target="22">*</keyword>
+        </keywords>
+    </State>
+
+    <State id="13">
+        <message>Why, what is wrong?</message>
+        <keywords>
+            <keyword target="22">sick</keyword>
+            <keyword target="25">*</keyword>
+        </keywords>
+    </State>
+
+    <State id="14">
+        <message>I'm very well, thanks.</message>
+    </State>
+
+    <State id="15">
+        <message>Why you are [status]?</message>
+        <keyword target="26" variable="reason">.*because (.*)</keyword>
+    </State>
+
+    <State id="16">
+        <message>Hello, how are you today?</message>
+        <keyword target="11">happy, very happy</keyword>
+        <keyword target="13">not happy,not good,not fine,sad,upset</keyword>
+        <keyword target="23">fine, good, thanks</keyword>
+    </State>
+
+    <State id="21">
+        <message>Wow, will you give me some?</message>
+        <keywords>
+            <keyword target="31">Yes</keyword>
+            <keyword target="41">No</keyword>
+        </keywords>
+    </State>
+
+    <State id="22">
+        <message>Oh, I hope you get better soon</message>
+    </State>
+
+    <State id="23">
+        <message>That's good, what is your plan?</message>
+        <keywords>
+            <keyword target="32">holiday</keyword>
+            <keyword target="33">about,what</keyword>
+            <keyword target="43">*</keyword>
+        </keywords>
+    </State>
+
+    <State id="24">
+        <message>Do you believe that is a good reason to be happy?</message>
+        <keyword target="43">*</keyword>
+    </State>
+
+    <State id="25">
+        <message>Sorry to hear that! What happen?</message>
+        <keyword target="44">*</keyword>
+    </State>
+
+    <State id="26">
+        <message>[name] do you think that is a good reason to be [status]?</message>
+        <keyword target="43">*</keyword>
+    </State>
+
+    <State id="27">
+        <message>What is [subject]?</message>
+        <keyword target="43" variable="result" learn="subject">(.*)</keyword>
+    </State>
+
+    <State id="31">
+        <message>Great, I appreciate that</message>
+    </State>
+
+    <State id="32">
+        <message>Cool, that sounds like a good plan.</message>
+        <message>I wish I could come</message>
+    </State>
+
+    <State id="33">
+        <message>Any plan for your future?</message>
+        <keyword target="42">no</keyword>
+        <keyword target="43">*</keyword>
+    </State>
+
+    <State id="41">
+        <message>You are greedy!</message>
+    </State>
+
+    <State id="42">
+        <message>Why not?</message>
+        <keyword target="43">*</keyword>
+    </State>
+
+    <State id="43">
+        <message>Interesting...</message>
+        <message>I see...</message>
+        <message>Hmmm...</message>
+        <message>No comment...</message>
+    </State>
+
+    <State id="44">
+        <message>What do you mean?</message>
+        <keyword target="43">*</keyword>
+    </State>
+    
+    <InvalidMessages>
+        <message>Huh, I didn't understand?</message>
+        <message>Sorry, I am slow!</message>
+        <message>What do you mean?</message>
+        <message>Could you explain?</message>
+        <message>Sorry about that, please explain clearly</message>
+    </InvalidMessages>
+</Config>

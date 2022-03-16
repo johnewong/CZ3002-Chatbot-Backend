@@ -17,7 +17,7 @@ public class ChabotController {
 
     @RequestMapping(value = "/initbot", method = RequestMethod.GET)
     public String initbot(String Question) {
-
+        this.bot = new Bot("0", "chatbotData/data_new.xml",  "chatbotData/faq.xml",   "chatbotData/rating.xml");
         String botMessage = bot.getMessage();
 
         return botMessage;

@@ -55,7 +55,7 @@ public class Bot {
 
         // end of the tree
         if (state.getKeywords().isEmpty()) {
-            this.level = "1";
+            this.level = "0";
         }
 
         // match the keyword with given message
@@ -73,7 +73,7 @@ public class Bot {
                 if (match.className.equals("Weather")) {
                     Weather weather = new Weather();
                     response = weather.getResponse(match.arg);
-                    this.level = "1";
+                    this.level = "0";
                 }
             } else {
 
@@ -86,7 +86,7 @@ public class Bot {
                     // if it is end of the tree
                     if (state.getKeywords().isEmpty()) {
                         response = this.getMessage();
-                        this.level = "1";
+                        this.level = "0";
 
                     }
                 }

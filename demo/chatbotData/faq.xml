@@ -2,19 +2,25 @@
 <Config>
     <Question id="1">
         How do I terminate my StarHub services?
-     </Question>
+        You will be eligible for coupon code offer if you have successfully applied a valid coupon code when you sign up to our services via the online store. Promotion terms and conditions apply.
+    </Question>
 
     <Question id="2">
-        How do I add an item to my cart?
-   </Question>
+        How do I add an item to my cart? <br />
+        Items will be automatically added to your cart once you have selected a phone/Broadband Plan, and have logged in to customise your order.
+
+
+    </Question>
 
     <Question id="3">
         How can I review my order?
+        You can review your order before proceeding to payment and delivery.
     </Question>
 
     <Question id="4">
         How can I be eligible for coupon code offer?
-     </Question>
+        You will be eligible for coupon code offer if you have successfully applied a valid coupon code when you sign up to our services via the online store. Promotion terms and conditions apply.
+    </Question>
 
 
 </Config>

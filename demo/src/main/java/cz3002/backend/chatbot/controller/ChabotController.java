@@ -24,11 +24,9 @@ public class ChabotController {
     }
 
     @RequestMapping(value = "/getAnswer", method = RequestMethod.GET)
-    public String getAnswer(String question, int state) {
-        if(state == 0){
-            this.bot = new Bot("0", "chatbotData/data_new.xml",  "chatbotData/faq.xml",   "chatbotData/rating.xml");
-        }
+    public String getAnswer(String question) {
 
+        System.out.println(question);
         String response = bot.send(question);
         String answer = "";
 

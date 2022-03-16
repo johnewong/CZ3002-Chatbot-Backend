@@ -250,7 +250,7 @@ public class Bot {
                 // loop through all children
                 for (int i = 0; i < nl.getLength(); i++) {
                     Element el = (Element) nl.item(i);
-                    String question = el.getTextContent().replaceAll("\\s","");
+                    String question = el.getTextContent();
                     // get state id
                     int id = Integer.parseInt(el.getAttribute("id"));
                     if(id <= topRows){

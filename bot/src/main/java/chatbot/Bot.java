@@ -55,7 +55,7 @@ public class Bot {
 
         // end of the tree
         if (state.getKeywords().isEmpty()) {
-            this.level = "1";
+            this.level = "0";
         }
 
         // match the keyword with given message

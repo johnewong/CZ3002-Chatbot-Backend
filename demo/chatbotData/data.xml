@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Config>
     <State id="0">
-        <message>Hello, My name is KopiO, what is your name?</message>
-        <keywords>       
+        <message>Hello, My name is KopiO, how can I help you?</message>
+        <keywords>
+            <keyword target="51">hub id</keyword>
+            <keyword target="52">starhub service</keyword>
+
+            <keyword target="53" variable="randomword">.*add(.*)item.*</keyword>
+            <keyword target="53">cart</keyword>
+
+            <keyword target="54" variable="randomword">.*review(.*)order.*</keyword>
+            <keyword target="55">coupon code offer</keyword>
+            <keyword target="56" variable="randomword">.*use(.*)coupon code.*</keyword>
+
+            <keyword target="57" variable="randomword">.*value(.*)add(.*)services.*</keyword>
+
+            <keyword target="58" variable="randomword">.*change(.*)item(.*)order.*</keyword>
+
+            <keyword target="59" variable="randomword">.*get(.*)coupon code(.*)not complete(.*)transaction.*</keyword>
+            <keyword target="60" variable="randomword">.*expiry(.*)coupon code.*</keyword>
+            <keyword target="22">*</keyword>
+
             <keyword target="16" variable="name" points="2">.*name is ([a-zA-z]+).*</keyword>
             <keyword target="16" variable="name">([a-zA-Z ]+)</keyword>
         </keywords>
     </State>
 
+    <State id="51">
+        <message>New to StarHub? You can create a Hub iD and password to explore or manage your StarHub services online or/and via My StarHub App. Your Hub iD will be the email address you used upon registration. With one iD for everything, you can now access all things StarHub, even on the go!</message>
+
+    </State>
+
+    <State id="52">
+        <message>Requests for termination of StarHub Broadband/TV services, together with the return of StarHub equipment, depending on type of services to be terminated, should be made at any of the 4 main StarHub Shops (Plaza Singapura, Jurong Point, Nex or Tampines). Your service is terminated as soon as your request is processed at either of these StarHub Shops, and you will no longer be able to use the service.</message>
+    </State>
+
+    <State id="53">
+        <message>Items will be automatically added to your cart once you have selected a phone/Broadband Plan, and have logged in to customise your order.</message>
+    </State>
+
+    <State id="54">
+        <message>You can review your order before proceeding to payment and delivery.</message>
+    </State>
+
+    <State id="55">
+        <message>You will be eligible for coupon code offer if you have successfully applied a valid coupon code when you sign up to our services via the online store. Promotion terms and conditions apply.</message>
+    </State>
+
+    <State id="56">
+        <message>No, the coupon code can only be used for sign-ups via our online store.</message>
+    </State>
+
+    <State id="57">
+        <message>You can add or edit Value-Added Services when customising your order.</message>
+    </State>
+
+    <State id="58">
+        <message>You can change your order by clicking on the edit 'pencil' icon and cancel by clicking on the delete ‘bin’ icon. The Online Store currently does not allow multiple orders, so you will have to complete any ongoing transactions before making another purchase.</message>
+    </State>
+
+    <State id="59">
+        <message>No, the offer is only applicable for customers who have successfully applied the coupon code when signing up to our services via the online store.</message>
+    </State>
+
+    <State id="60">
+        <message>Yes, the coupon code will expire when the promotion ends.</message>
+    </State>
     <State id="1">
         <message>What do you want to talk about?</message>
         <message>What else?</message>
@@ -131,7 +189,7 @@
         <message>What do you mean?</message>
         <keyword target="43">*</keyword>
     </State>
-    
+
     <InvalidMessages>
         <message>Huh, I didn't understand?</message>
         <message>Sorry, I am slow!</message>

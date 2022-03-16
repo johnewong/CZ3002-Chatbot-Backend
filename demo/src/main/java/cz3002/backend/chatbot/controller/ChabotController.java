@@ -14,13 +14,21 @@ public class ChabotController {
     // construct new bot with level 0 as default and given data parser
     Bot bot = new Bot("0", currentDir + "\\chatbotData\\data.xml",currentDir + "\\chatbotData\\faq.xml",currentDir + "\\chatbotData\\rating.xml");
 
+    @RequestMapping(value = "/initbot", method = RequestMethod.GET)
+    public String initbot(String Question) {
 
+        String botMessage = bot.getMessage();
+
+        return botMessage;
+    }
 
     @RequestMapping(value = "/getAnswer", method = RequestMethod.GET)
     public String getAnswer(String Question) {
-        String Answer = bot.send(Question);
 
-        return Answer;
+        String response = bot.send(Question);
+
+
+        return response;
     }
     @RequestMapping(value = "/rating", method = RequestMethod.GET)
     @ResponseBody

@@ -16,6 +16,10 @@
             <keyword target="57" variable="randomword">.*value(.*)add(.*)services.*</keyword>
 
             <keyword target="58" variable="randomword">.*change(.*)item(.*)order.*</keyword>
+            <keyword target="58" variable="randomword">.*edit(.*)item(.*)order.*</keyword>
+            <keyword target="58" variable="randomword">.*cancel(.*)item(.*)order.*</keyword>
+
+
 
             <keyword target="59" variable="randomword">.*get(.*)coupon code(.*)not complete(.*)transaction.*</keyword>
             <keyword target="60" variable="randomword">.*expiry(.*)coupon code.*</keyword>
@@ -48,7 +52,7 @@
     </State>
 
     <State id="56">
-        <message>No, the coupon code can only be used for sign-ups via our online store.</message>
+        <message>The coupon code can only be used for sign-ups via our online store.</message>
     </State>
 
     <State id="57">
